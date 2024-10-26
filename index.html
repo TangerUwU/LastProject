@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.komnata {
+			height: 1900px;
+			background-size: 100% 100%;
+			background-image: url(dom.jpg);
+		}
+		.school {
+			height: 1900px;
+			background-size: 100% 100%;
+			background-image: url(10.webp);
+			display: none;
+			transition: 1s;
+			opacity: 0;
+		}
+		.klass {
+			height: 1900px;
+			background-size: 100% 100%;
+			background-image: url(11.jfif);
+			display: none;
+			transition: 1s;
+			opacity: 0;
+		}
+		.uliza {
+			height: 1900px;
+			background-size: 100% 100%;
+			background-image: url(uliza.jpg);
+			display: none;
+			transition: 1s;
+
+		}
+		.uliza2 {
+			height: 1900px;
+			background-size: 100% 100%;
+			background-image: url(uliza2.jpg);
+			display: none;
+			transition: 1s;
+			opacity: 0;
+		}
+		.kurtka {
+			height: 800px;
+			width: 900px;
+			position: absolute;
+			left: 1600px;
+			top: 100px;
+			background-size: 100% 100%;
+			background-image: url("kurtka.png");
+		}
+		.sumka {
+			height: 700px;
+			width: 600px;
+			position: absolute;
+			left: 2800px;
+			top: 800px;
+			background-size: 100% 100%;
+			background-image: url("sumka.png");
+		}
+		.podkraduli {
+			height: 800px;
+			width: 900px;
+			position: absolute;
+			left: 400px;
+			top: 1000px;
+			background-size: 100% 100%;
+			background-image: url("podkraduli.png");
+		}
+		.shtany {
+			height: 600px;
+			width: 400px;
+			position: absolute;
+			left: 800px;
+			top: 100px;
+			background-size: 100% 100%;
+			background-image: url("shtany.png");
+			transform: rotate(-45deg);
+			}
+		.doorsdom {
+			height: 1900px;
+			background-size: 100% 100%;
+			background-image: url(dom5.jpg);
+			display: none;
+		}
+		.garderob {
+			height: 1900px;
+			background-size: 100% 100%;
+			background-image: url(garderob.jpg);
+			display: none;
+		}
+
+		.domdoor {
+			height: 800px;
+			width: 400px;
+			position: absolute;
+			background-image: url(dver.png);
+			background-size: 100% 100%;
+			left: 1700px;
+			top: 680px;
+		}
+		.tualetdoor {
+			height: 800px;
+			width: 400px;
+			position: absolute;
+			background-image: url(dver.png);
+			background-size: 100% 100%;
+			left: 2400px;
+			top: 680px;
+			transform: scaleX(-1);
+
+		}
+		.vyhoddoor {
+			height: 800px;
+			width: 400px;
+			position: absolute;
+			background-image: url(dver.png);
+			background-size: 100% 100%;
+			left: 1500px;
+			top: 680px;
+
+		}
+		.garderobdoor {
+			height: 1400px;
+			width: 1800px;
+			position: absolute;
+			background-image: url(shkaf.png);
+			background-size: 100% 100%;
+			left: 1900px;
+			top: 400px;
+
+		}
+
+		.holodilnikdoor {
+			height: 800px;
+			width: 400px;
+			position: absolute;
+			background-image: url(holodilnik.png);
+			background-size: 100% 100%;
+			left: 1000px;
+			top: 800px;
+		}
+		.tualet {
+			height: 1900px;
+			background-size: 100% 100%;
+			background-image: url(tualet1.jpg);
+			display: none;
+		}
+		.nKomnata {
+			height: 150px;
+			width: 700px;
+			background: white;
+			position: absolute;
+			left: 50px;
+			top: 1680px;
+			font-size: 100px;
+			opacity: 50%;
+			border-radius: 40px;
+		}
+		.nDom {
+			height: 150px;
+			width: 800px;
+			background: white;
+			position: absolute;
+			left: 50px;
+			top: 1680px;
+			font-size: 100px;
+			opacity: 50%;
+			border-radius: 40px;
+		}
+
+		.nKomnata2 {
+			height: 150px;
+			width: 1000px;
+			background: white;
+			position: absolute;
+			left: 50px;
+			top: 1680px;
+			font-size: 100px;
+			opacity: 50%;
+			border-radius: 40px;
+
+		}
+		.nKomnata3 {
+			height: 150px;
+			width: 700px;
+			background: white;
+			position: absolute;
+			left: 50px;
+			top: 1680px;
+			font-size: 100px;
+			opacity: 50%;
+			border-radius: 40px;
+
+		}
+		.tolchok {
+			width: 900px;
+			height: 800px;
+			background-image: url("skibidi.png");
+			background-size: 100% 100%;
+			position: absolute;
+			left: 1100px;
+			top: 800px;
+		}
+		.rakovina {
+			width: 900px;
+			height: 800px;
+			background-image: url("umyvalka.png");
+			background-size: 100% 100%;
+			position: absolute;
+			left: 1800px;
+			top: 800px;
+		}
+		.achivka1 {
+			width: 900px;
+			height: 600px;
+			font-size: 100px;
+			border-radius: 40px;
+			display: none;
+			background: white;
+			font-family: fantasy;
+			text-align: center;
+			position: relative;
+		}
+		.achivka5 {
+			width: 900px;
+			height: 700px;
+			font-size: 100px;
+			border-radius: 40px;
+			display: none;
+			background: white;
+			font-family: fantasy;
+			text-align: center;
+			position: relative;
+		}
+		.achivka4 {
+			width: 900px;
+			height: 600px;
+			font-size: 100px;
+			border-radius: 40px;
+			display: none;
+			background: white;
+			font-family: fantasy;
+			text-align: center;
+			position: relative;
+		}
+		.achivka3 {
+			width: 900px;
+			height: 600px;
+			font-size: 100px;
+			border-radius: 40px;
+			display: none;
+			background: white;
+			font-family: fantasy;
+			text-align: center;
+			position: relative;
+		}
+		.achivka2 {
+			width: 900px;
+			height: 800px;
+			font-size: 100px;
+			border-radius: 40px;
+			display: none;
+			background: white;
+			font-family: fantasy;
+			text-align: center;
+			position: relative;
+			z-index: 50;
+		}
+		.krestik {
+			height:150px;
+			width: 150px; 
+			position: absolute; 
+			right: 0;  
+			border-radius: 20px; 
+			background-image: url('krestik-kartinki-1.png'); 
+			background-size: 100% 100%;
+		}
+		.krestik4 {
+			height:150px;
+			width: 150px; 
+			position: absolute; 
+			right: 0;  
+			border-radius: 20px; 
+			background-image: url('krestik-kartinki-1.png'); 
+			background-size: 100% 100%;
+		}
+		.krestik2 {
+			height:150px;
+			width: 150px; 
+			position: absolute; 
+			right: 0;  
+			border-radius: 20px; 
+			background-image: url('krestik-kartinki-1.png'); 
+			background-size: 100% 100%;
+		}
+		.krestik3 {
+			height:150px;
+			width: 150px; 
+			position: absolute; 
+			right: 0; 
+			border-radius: 20px; 
+			background-image: url('krestik-kartinki-1.png'); 
+			background-size: 100% 100%;;
+		}
+		.krestik5 {
+			height:150px;
+			width: 150px; 
+			position: absolute; 
+			right: 0; 
+			border-radius: 20px; 
+			background-image: url('krestik-kartinki-1.png'); 
+			background-size: 100% 100%;;
+		}
+		.holodilnik {
+			height: 1900px;
+			background-size: 100% 100%;
+			background-image: url(ho.avif);
+			display: none;
+		}
+		.burger {
+			height: 1000px;
+			width: 1300px;
+			position: absolute;
+			left: 700px;
+			top: 400px;
+			background-size: 100% 100%;
+			background-image: url("burger.png");
+		}
+		.kola {
+			height: 1200px;
+			width: 1300px;
+			position: absolute;
+			left: 1600px;
+			top: 100px;
+			background-size: 100% 100%;
+			background-image: url("cola.png");
+		}
+		.strelochka1 {
+			height: 400px;
+			width: 500px;
+			position: absolute;
+			left: 300px;
+			top: 900px;
+			background-size: 100% 100%;
+			background-image: url("9.gif");
+		}
+		.strelochka2 {
+			height: 400px;
+			width: 500px;
+			position: absolute;
+			left: 1750px;
+			top: 600px;
+			background-size: 100% 100%;
+			background-image: url("9.gif");
+		}
+		.strelochka3 {
+			height: 400px;
+			width: 500px;
+			position: absolute;
+			left: 2500px;
+			top: 500px;
+			background-size: 100% 100%;
+			background-image: url("9.gif");
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="main">
+
+		<div class="doors">
+			<div class="komnata">
+				<div class="holodilnikdoor"></div>
+				<div class="tualetdoor"></div>
+				<div class="domdoor"></div>
+			</div>
+			
+		</div>
+
+		<div class="dom">
+			<div class="doorsdom">
+				<div class="garderobdoor"></div>
+				<div class="vyhoddoor"></div>
+				<div class="nKomnata3">
+					Назад в комнату
+				</div>
+			</div>
+			<div class="garderob">
+				<div class="shtany"></div>
+				<div class="sumka"></div>
+				<div class="kurtka"></div>
+				<div class="podkraduli"></div>
+				<div class="nDom">
+					Назад в прихожую
+				</div>
+			</div>
+			<div class="vyhod"></div>
+		</div>
+		 
+		<div class="tualet">
+			<div class="rakovina"></div>
+			<div style="display: flex; justify-content: center;">
+				<div class="achivka1">
+					<div class="krestik"></div>
+					ТЫ ПОСРАЛ! С ОБЛЕГЧЕНИЕМ!
+					<img src="kiss.png" style="background-size: 100% 100%; height: 300px;">
+				</div>
+			</div>
+			<div style="display: flex; justify-content: center;">
+				<div class="achivka2">
+					<div class="krestik2"></div>
+					<div>ТЕПЕРЬ ТЫ ЧИСТИНКИЙ!</div>
+					<img src="4.gif" style="background-size: 100% 100%; height: 500px;">
+				</div>
+			</div>
+			<div class="tolchok"></div>
+			<div class="nKomnata">
+				Назад в комнату
+			</div>
+		</div>	
+		<div class="holodilnik">
+			<div class="burger"></div>
+			<div class="kola"></div>
+			<div class="nKomnata2">
+				Закрыть холодильник
+			</div>
+		</div>
+		<div class="uliza">
+			<div style="display: flex; justify-content: center;">
+				<div class="achivka3">
+					<div class="krestik3"></div>
+					<div style="text-align: center; margin-right: 30px;">ИДИ В ШКОЛУ</div>
+					<img src="6.png" style="background-size: 100% 100%; height: 500px; margin-bottom: 50px;">
+				</div>
+			</div>
+			<div class="strelochka1"></div>
+		</div>
+		<div class="uliza2">
+			<div class="strelochka2"></div>
+		</div>
+		<div class="school">
+			<div style="display: flex; justify-content: center;">
+				<div class="achivka4">
+					<div class="krestik4"></div>
+					<div style="text-align: center; margin-right: 30px;">ИДИ В КЛАСС</div>
+					<img src="6.png" style="background-size: 100% 100%; height: 500px; margin-bottom: 50px; transform: scaleX(-1);">
+				</div>
+			</div>
+			<div class="strelochka3"></div>
+		</div>
+		<div class="klass">
+			<div style="display: flex; justify-content: center;">
+				<div class="achivka5">
+					<div class="krestik5"></div>
+					<div style="text-align: center; margin-right: 30px;">ТЫ В КЛАССЕ</div>
+					<img src="kiss.png" style="background-size: 100% 100%; height: 500px; margin-bottom: 50px;">
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+
+	<script type="text/javascript">
+		let dom = document.querySelector('.dom')
+		let dver = document.querySelector('.dver')
+		let holodilnik = document.querySelector('.holodilnik')
+		let holodilnikdoor = document.querySelector('.holodilnikdoor')
+		let tualet = document.querySelector(".tualet")
+		let doors = document.querySelector(".doors")
+		let tualetdoor = document.querySelector(".tualetdoor")
+		let nKomnata = document.querySelector(".nKomnata")
+		let nKomnata2 = document.querySelector(".nKomnata2")
+		let tolchok = document.querySelector(".tolchok")
+		let rakovina = document.querySelector(".rakovina")
+		let achivka1 = document.querySelector(".achivka1")
+		let achivka2 = document.querySelector(".achivka2")
+		let krestik = document.querySelector(".krestik")
+		let krestik2 = document.querySelector(".krestik2")
+		let burger = document.querySelector(".burger")
+		let kola = document.querySelector(".kola")
+		let domdoor = document.querySelector(".domdoor")
+		let garderobdoor = document.querySelector(".garderobdoor")
+		let vyhoddoor = document.querySelector(".vyhoddoor")
+		let doorsdom = document.querySelector(".doorsdom")
+		let garderob = document.querySelector(".garderob")
+		let sumka = document.querySelector(".sumka")
+		let kurtka = document.querySelector(".kurtka")
+		let podkraduli = document.querySelector(".podkraduli")
+		let shtany = document.querySelector(".shtany")
+		let nKomnata3 = document.querySelector(".nKomnata3")
+		let nDom = document.querySelector(".nDom")
+		let uliza = document.querySelector(".uliza")
+		let krestik3 = document.querySelector(".krestik3")
+		let achivka3 = document.querySelector(".achivka3")
+		let strelochka1 = document.querySelector(".strelochka1")
+		let uliza2 = document.querySelector(".uliza2")
+		let strelochka2 = document.querySelector(".strelochka2")
+		let school = document.querySelector(".school")
+		let achivka4 = document.querySelector(".achivka4")
+		let krestik4 = document.querySelector(".krestik4")
+		let strelochka3 = document.querySelector(".strelochka3")
+		let klass = document.querySelector(".klass")
+		let achivka5 = document.querySelector(".achivka5")
+		let krestik5 = document.querySelector(".krestik5")
+
+
+
+		tualetdoor.onclick = function() {
+			doors.style.display = "none"
+			tualet.style.display = "block"
+		}
+		nKomnata.onclick = function() {
+			doors.style.display = "block"
+			tualet.style.display = "none"
+		}
+		rakovina.onclick = function() {
+			achivka2.style.display = "block"
+			achivka1.style.display = "none"
+		}
+		tolchok.onclick = function() {
+			achivka1.style.display = "block"
+			achivka2.style.display = "none"
+		}
+		krestik.onclick = function() {
+			achivka1.style.display = "none"
+			
+		}
+		krestik4.onclick = function() {
+			achivka4.style.display = "none"
+			
+		}
+		krestik5.onclick = function() {
+			achivka5.style.display = "none"
+			
+		}
+		krestik3.onclick = function() {
+			achivka3.style.display = "none"
+			
+		}
+		krestik2.onclick = function() {
+			achivka2.style.display = "none"
+			
+		}
+		holodilnikdoor.onclick = function() {
+			doors.style.display = "none"
+			holodilnik.style.display = "block"
+		}
+		burger.onclick = function() {
+			burger.style.display = "none"
+		}
+		kola.onclick = function() {
+			kola.style.display = "none"
+		}
+		nKomnata2.onclick = function() {
+			doors.style.display = "block"
+			holodilnik.style.display = "none"
+		}
+		domdoor.onclick = function() {
+			doors.style.display = "none"
+			doorsdom.style.display = "block"
+		}
+		garderobdoor.onclick = function() {
+			doorsdom.style.display = "none"
+			garderob.style.display = "block"
+		}
+
+		kurtka.onclick = function() {
+			kurtka.style.display = "none"
+		}
+		sumka.onclick = function() {
+			sumka.style.display = "none"
+		}
+		shtany.onclick = function() {
+			shtany.style.display ="none"
+		}
+		podkraduli.onclick = function() {
+			podkraduli.style.display ="none"
+		}
+		nKomnata3.onclick = function() {
+			doors.style.display = "block"
+			doorsdom.style.display = "none"
+		}
+		nDom.onclick = function() {
+			doorsdom.style.display = "block"
+			garderob.style.display = "none"
+		}
+		vyhoddoor.onclick = function() {
+			doorsdom.style.display = "none"
+			uliza.style.display = "block"
+			achivka3.style.display = "block"
+		}
+		strelochka1.onclick = function() {
+			uliza.style.opacity = "0"
+			setTimeout(function(){
+				uliza.style.display = "none"
+			}, 1000)
+			uliza2.style.display = "block"
+			setTimeout(function(){	
+				uliza2.style.opacity = "1"
+			}, 1000)
+			
+		}
+		strelochka2.onclick = function() {
+			uliza2.style.opacity = "0"
+			setTimeout(function(){
+				uliza2.style.display = "none"
+			}, 1000)
+			school.style.display = "block"
+			setTimeout(function(){	
+				school.style.opacity = "1"
+			}, 1000)
+			achivka4.style.display = "block"
+			
+		}
+		strelochka3.onclick = function() {
+			school.style.opacity = "0"
+			setTimeout(function(){
+				school.style.display = "none"
+			}, 1000)
+			klass.style.display = "block"
+			setTimeout(function(){	
+				klass.style.opacity = "1"
+			}, 1000)
+			achivka5.style.display = "block"
+			
+		}
+
+
+
+
+
+
+
+
+		
+	</script>
+</body>
+</html>
